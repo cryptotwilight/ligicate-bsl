@@ -1,0 +1,41 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="fooLayout" template="/jsp/frontpage/frontpage_tiles.jsp">
+        <put-attribute name="title" value="Ligicate |"/>
+        <put-attribute name="header" value=".header"/>
+        <put-attribute name="content_" value=".contentp"/>
+       <!-- <put-attribute name="bestOf" value=".bestOfp"/>-->
+        <put-attribute name="results" value=".resultsp"/>
+        <put-attribute name="body" value=".bodyp"/>
+    </definition>
+
+
+	<definition name="login" extends="fooLayout"> 
+		<put-attribute name="responsiveHeader" value="/jsp/tiles/theme/responsive_header.jsp"/>
+		<put-attribute name="head" value="/jsp/tiles/theme/head.jsp"/>
+		<put-attribute name="content_" value="/jsp/tiles/security/login.jsp"/>
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer" value="/jsp/tiles/theme/footer.jsp"/>
+		<put-attribute name="footerScripts" value="/jsp/tiles/theme/footer_scripts.jsp"/>
+		<!--  <put-attribute name="premiumStandardSearch" value="/jsp/tiles/theme/premium_standard_search.jsp"/>-->
+	</definition>
+
+
+
+	<definition name="dashboard" extends="fooLayout"> 
+		<put-attribute name="responsiveHeader" value="/jsp/tiles/theme/responsive_header.jsp"/>
+		<put-attribute name="head" value="/jsp/tiles/theme/head.jsp"/>
+		<put-attribute name="content_" value="/jsp/tiles/dashboard/dashboard.jsp"/>
+		<!-- <put-attribute name="bestOf" value="/jsp/tiles/widgets/best/bestOfTheHour.jsp"/>  -->
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer" value="/jsp/tiles/theme/footer.jsp"/>
+		<put-attribute name="footerScripts" value="/jsp/tiles/theme/footer_scripts.jsp"/>
+		<!--  <put-attribute name="premiumStandardSearch" value="/jsp/tiles/theme/premium_standard_search.jsp"/>-->
+	</definition>
+
+
+</tiles-definitions>
